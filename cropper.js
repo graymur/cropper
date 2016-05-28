@@ -189,6 +189,11 @@ Cropper.prototype.cutEdgesByPercentage = function(top, right, bottom, left) {
     return this;
 };
 
+Cropper.prototype.grayscale = function () {
+    this._addCommand('-colorspace gray');
+    return this;
+};
+
 /* ------------------- */
 
 /**
