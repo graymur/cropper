@@ -1,0 +1,16 @@
+{
+  "name": "cropper",
+  "version": "1.0.0",
+  "description": "Node image cropper",
+  "main": "src/cropper.js",
+  "scripts": {
+    "test": "mocha test/**/*.js* --colors"
+  },
+  "author": "Graymur",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "image-size": "^0.5.0",
+    "mocha": "^2.5.3"
+  }
+}
