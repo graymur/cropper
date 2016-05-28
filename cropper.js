@@ -124,8 +124,7 @@ Cropper.prototype.crop = function (x, y, width, height) {
  * @returns {Cropper}
  */
 Cropper.prototype.square = function(size) {
-    this._addCommand('-resize x' + size + ' -gravity center -crop ' + size + 'x' + size + '+0+0 +repage');
-    return this;
+    return this.cutIntoSize(size, size);
 };
 
 /**
@@ -155,8 +154,8 @@ Cropper.prototype.putIntoSize = function(width, height, bgColor) {
  * @returns {Cropper}
  */
 Cropper.prototype.cutIntoSize = function(width, height) {
-    this._addCommand('-resize ' + width + 'x' + height + '^');
-    this._addCommand('-gravity center -extent ' + width + 'x' + height);
+    this._addCommand('-resize "' + width + 'x' + height + '^" -gravity center -crop ' + width + 'x' + height + '+0+0 +repage');
+
     return this;
 };
 
