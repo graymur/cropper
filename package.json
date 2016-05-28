@@ -2,7 +2,7 @@
   "name": "cropper",
   "version": "1.0.0",
   "description": "Node image cropper",
-  "main": "src/cropper.js",
+  "main": "cropper.js",
   "scripts": {
     "test": "mocha test/**/*.js* --colors"
   },

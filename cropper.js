@@ -18,7 +18,7 @@ Cropper.prototype.RESIZE_WIDTH = 4;
  * @returns {Cropper}
  */
 Cropper.prototype.setIMPath = function (path) {
-    this.imageMagicPath = path;
+    this.imageMagicPath = String(path);
     return this;
 };
 
@@ -27,7 +27,7 @@ Cropper.prototype.setIMPath = function (path) {
  * @returns {Cropper}
  */
 Cropper.prototype.setSource = function (source) {
-    this.source = source;
+    this.source = String(source);
     return this;
 };
 
@@ -36,7 +36,7 @@ Cropper.prototype.setSource = function (source) {
  * @returns {Cropper}
  */
 Cropper.prototype.setTarget = function (target) {
-    this.target = target;
+    this.target = String(target);
     return this;
 };
 
@@ -45,7 +45,7 @@ Cropper.prototype.setTarget = function (target) {
  * @returns {Cropper}
  */
 Cropper.prototype.setQuality = function (quality) {
-    this.quality = quality;
+    this.quality = Number(quality);
     return this;
 };
 
@@ -202,7 +202,7 @@ Cropper.prototype._addCommand = function (command, clear) {
         this.command = [];
     }
 
-    this.command.push(command);
+    this.command.push(String(command));
 };
 
 /**
