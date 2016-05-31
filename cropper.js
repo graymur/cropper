@@ -170,6 +170,18 @@ Cropper.prototype.sharpen = function(amount) {
 };
 
 /**
+ * @param radius
+ * @param sigma
+ * @returns {Cropper}
+ */
+Cropper.prototype.blur = function(radius, sigma) {
+    radius = radius || 2;
+    sigma = sigma || 2;
+    this._addCommand('-blur ' + radius + 'x' + sigma);
+    return this;
+};
+
+/**
  * @param top
  * @param right
  * @param bottom
